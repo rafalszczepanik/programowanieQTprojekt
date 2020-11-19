@@ -1,0 +1,1 @@
+pyuic5.exe MainMenu.ui -o mainmenu.py
