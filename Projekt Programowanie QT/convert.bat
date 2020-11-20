@@ -1,1 +1,1 @@
-pyuic5.exe MainMenu.ui -o mainmenu.py
+pyuic5.exe Kwadrat.ui -o kwadrat.py

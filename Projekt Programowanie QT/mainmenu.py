@@ -58,7 +58,7 @@ class FirstSite(object):
         self.retranslateUi(Form)
         
         QtCore.QMetaObject.connectSlotsByName(Form)
-        self.show()
+
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
@@ -74,6 +74,7 @@ class FirstSite(object):
         self.pushButton_9.setText(_translate("Form", "DELTOID"))
         #self.lineEdit.setText(_translate("Form", "Kalkulator Figur Płaskich"))
         self.helpButton.setText(_translate("Form", "HELP"))
+
 
 
 
