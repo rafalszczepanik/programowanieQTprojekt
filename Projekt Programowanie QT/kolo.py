@@ -23,7 +23,7 @@ class Ui_Kolo(object):
         self.label.setStyleSheet("labelcolor:rgb(204, 204, 204)")
         self.label.setFrameShape(QtWidgets.QFrame.Box)
         self.label.setFrameShadow(QtWidgets.QFrame.Sunken)
-        self.label.setLineWidth(1)
+        self.label.setLineWidth(4)
         self.label.setMidLineWidth(0)
         self.label.setWordWrap(False)
         self.label.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByMouse)
@@ -41,7 +41,7 @@ class Ui_Kolo(object):
         self.label_2.setStyleSheet("labelcolor:rgb(204, 204, 204)")
         self.label_2.setFrameShape(QtWidgets.QFrame.Box)
         self.label_2.setFrameShadow(QtWidgets.QFrame.Sunken)
-        self.label_2.setLineWidth(1)
+        self.label_2.setLineWidth(4)
         self.label_2.setMidLineWidth(0)
         self.label_2.setWordWrap(False)
         self.label_2.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByMouse)
@@ -51,7 +51,7 @@ class Ui_Kolo(object):
         self.label_3.setStyleSheet("labelcolor:rgb(204, 204, 204)")
         self.label_3.setFrameShape(QtWidgets.QFrame.Box)
         self.label_3.setFrameShadow(QtWidgets.QFrame.Sunken)
-        self.label_3.setLineWidth(1)
+        self.label_3.setLineWidth(4)
         self.label_3.setMidLineWidth(0)
         self.label_3.setWordWrap(False)
         self.label_3.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByMouse)
@@ -73,3 +73,13 @@ class Ui_Kolo(object):
         self.pushButton.setText(_translate("Kolo", "Oblicz"))
         self.label_2.setText(_translate("Kolo", "Pole koła"))
         self.label_3.setText(_translate("Kolo", "Obwód koła"))
+
+        self.pushButton.clicked.connect(self.wykonaj)
+
+    def wykonaj(self):
+            zmienna1 = self.lineEdit.text()
+            pom = 3.14
+            polekola = (int(zmienna1) * int(zmienna1))* pom
+            obwodkola = int(zmienna1) * 2
+            self.lcdNumber.display(polekola)
+            self.lcdNumber_2.display(obwodkola)
