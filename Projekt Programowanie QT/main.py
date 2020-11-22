@@ -1,6 +1,7 @@
 import sys
 from PyQt5.QtWidgets import QMainWindow, QApplication
 from mainmenu import FirstSite
+from kwadrat import Ui_Kwadrat
 
 
 class MyMainWindow(QMainWindow, FirstSite):
@@ -9,8 +10,11 @@ class MyMainWindow(QMainWindow, FirstSite):
         self.setupUi(self)
 
 
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     myWin = MyMainWindow()
     myWin.show()
     sys.exit(app.exec_())
+
+

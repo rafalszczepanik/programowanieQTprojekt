@@ -13,27 +13,72 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QPushButton" name="kwadratBUTTON">
+  <property name="styleSheet">
+   <string notr="true">background:rgb(255, 225, 255)</string>
+  </property>
+  <widget class="QPushButton" name="KwadratButton">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>20</x>
      <y>70</y>
      <width>151</width>
      <height>101</height>
     </rect>
    </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
+   <property name="tabletTracking">
+    <bool>false</bool>
+   </property>
+   <property name="acceptDrops">
+    <bool>false</bool>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgb(0, 153, 255)
+QPuschButton(color: black)
+
+</string>
+   </property>
    <property name="text">
     <string>KWADRAT</string>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="default">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
    </property>
   </widget>
   <widget class="QPushButton" name="koloBUTTON">
    <property name="geometry">
     <rect>
-     <x>220</x>
+     <x>210</x>
      <y>70</y>
      <width>151</width>
      <height>101</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgb(0, 153, 255)
+QPuschButton(color: black)
+
+</string>
    </property>
    <property name="text">
     <string>KOŁO</string>
@@ -42,11 +87,17 @@
   <widget class="QPushButton" name="prostokatBUTTON">
    <property name="geometry">
     <rect>
-     <x>410</x>
+     <x>400</x>
      <y>70</y>
      <width>151</width>
      <height>101</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgb(0, 153, 255)
+QPuschButton(color: black)
+
+</string>
    </property>
    <property name="text">
     <string>PROSTOKĄT</string>
@@ -55,11 +106,17 @@
   <widget class="QPushButton" name="rownoleglobokBUTTON">
    <property name="geometry">
     <rect>
-     <x>410</x>
+     <x>400</x>
      <y>230</y>
      <width>151</width>
      <height>101</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgb(0, 153, 255)
+QPuschButton(color: black)
+
+</string>
    </property>
    <property name="text">
     <string>RÓWNOLEGŁOBOK</string>
@@ -68,11 +125,17 @@
   <widget class="QPushButton" name="trojkatBUTTON">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>20</x>
      <y>230</y>
      <width>151</width>
      <height>101</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgb(0, 153, 255)
+QPuschButton(color: black)
+
+</string>
    </property>
    <property name="text">
     <string>TRÓJKĄT</string>
@@ -81,11 +144,17 @@
   <widget class="QPushButton" name="rombBUTTON">
    <property name="geometry">
     <rect>
-     <x>220</x>
+     <x>210</x>
      <y>230</y>
      <width>151</width>
      <height>101</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgb(0, 153, 255)
+QPuschButton(color: black)
+
+</string>
    </property>
    <property name="text">
     <string>ROMB</string>
@@ -94,11 +163,17 @@
   <widget class="QPushButton" name="exitBUTTON">
    <property name="geometry">
     <rect>
-     <x>410</x>
+     <x>400</x>
      <y>470</y>
      <width>141</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgb(0, 153, 255)
+QPuschButton(color: black)
+
+</string>
    </property>
    <property name="text">
     <string>EXIT</string>
@@ -107,11 +182,17 @@
   <widget class="QPushButton" name="trapezBUTTON">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>20</x>
      <y>400</y>
      <width>151</width>
      <height>101</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgb(0, 153, 255)
+QPuschButton(color: black)
+
+</string>
    </property>
    <property name="text">
     <string>TRAPEZ</string>
@@ -120,43 +201,36 @@
   <widget class="QPushButton" name="pushButton_9">
    <property name="geometry">
     <rect>
-     <x>220</x>
+     <x>210</x>
      <y>400</y>
      <width>151</width>
      <height>101</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgb(0, 153, 255)
+QPuschButton(color: black)
+
+</string>
+   </property>
    <property name="text">
     <string>DELTOID</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit">
-   <property name="geometry">
-    <rect>
-     <x>80</x>
-     <y>10</y>
-     <width>431</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Arial</family>
-     <pointsize>22</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Kalkulator Figur Płaskich</string>
    </property>
   </widget>
   <widget class="QPushButton" name="helpButton">
    <property name="geometry">
     <rect>
-     <x>410</x>
+     <x>400</x>
      <y>400</y>
      <width>141</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgb(0, 153, 255)
+QPuschButton(color: black)
+
+</string>
    </property>
    <property name="text">
     <string>HELP</string>

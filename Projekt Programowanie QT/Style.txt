@@ -1,0 +1,10 @@
+Menu glowne
+
+background:rgb(255, 225, 255)
+
+background:rgb(0, 153, 255)
+QPuschButton(color: black)
+
+Podstrony
+background:rgb(11, 198, 205)
+labelcolor:rgb(204, 204, 204)

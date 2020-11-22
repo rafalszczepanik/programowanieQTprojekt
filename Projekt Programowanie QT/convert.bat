@@ -1,1 +1,1 @@
-pyuic5.exe Kwadrat.ui -o kwadrat.py
+pyuic5.exe Kolo.ui -o kolo.py

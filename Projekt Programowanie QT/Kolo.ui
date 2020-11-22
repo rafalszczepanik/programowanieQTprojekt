@@ -53,7 +53,7 @@
     <number>0</number>
    </property>
    <property name="text">
-    <string>Wpisz długość boku kwadratu</string>
+    <string>Wpisz długość promienia</string>
    </property>
    <property name="wordWrap">
     <bool>false</bool>
@@ -116,7 +116,7 @@
     <number>0</number>
    </property>
    <property name="text">
-    <string>Pole kwadratu</string>
+    <string>Pole koła</string>
    </property>
    <property name="wordWrap">
     <bool>false</bool>
@@ -150,7 +150,7 @@
     <number>0</number>
    </property>
    <property name="text">
-    <string>Obwód kwadratu</string>
+    <string>Obwód koła</string>
    </property>
    <property name="wordWrap">
     <bool>false</bool>
