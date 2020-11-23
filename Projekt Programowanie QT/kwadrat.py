@@ -32,12 +32,15 @@ class Ui_Kwadrat(object):
         self.lineEdit = QtWidgets.QLineEdit(Kwadrat)
         self.lineEdit.setGeometry(QtCore.QRect(90, 70, 113, 22))
         self.lineEdit.setStyleSheet("background:rgb(255, 255, 255)")
+        self.lineEdit.setAlignment(QtCore.Qt.AlignHCenter | QtCore.Qt.AlignTop)
         self.lineEdit.setObjectName("lineEdit")
+        self.lineEdit.setValidator(QtGui.QIntValidator(1, 999))
 
         self.pushButton = QtWidgets.QPushButton(Kwadrat)
         self.pushButton.setGeometry(QtCore.QRect(100, 120, 93, 28))
         self.pushButton.setStyleSheet("background:rgb(255, 255, 255)")
         self.pushButton.setObjectName("pushButton")
+
         self.label_2 = QtWidgets.QLabel(Kwadrat)
         self.label_2.setGeometry(QtCore.QRect(20, 170, 101, 31))
         self.label_2.setStyleSheet("labelcolor:rgb(204, 204, 204)")
@@ -48,6 +51,7 @@ class Ui_Kwadrat(object):
         self.label_2.setWordWrap(False)
         self.label_2.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByMouse)
         self.label_2.setObjectName("label_2")
+
         self.label_3 = QtWidgets.QLabel(Kwadrat)
         self.label_3.setGeometry(QtCore.QRect(170, 170, 120, 31))
         self.label_3.setStyleSheet("labelcolor:rgb(204, 204, 204)")
@@ -58,10 +62,11 @@ class Ui_Kwadrat(object):
         self.label_3.setWordWrap(False)
         self.label_3.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByMouse)
         self.label_3.setObjectName("label_3")
+
         self.lcdNumber = QtWidgets.QLCDNumber(Kwadrat)
         self.lcdNumber.setGeometry(QtCore.QRect(40, 220, 64, 23))
-
         self.lcdNumber.setObjectName("lcdNumber")
+
         self.lcdNumber_2 = QtWidgets.QLCDNumber(Kwadrat)
         self.lcdNumber_2.setGeometry(QtCore.QRect(190, 220, 64, 23))
         self.lcdNumber_2.setObjectName("lcdNumber_2")
@@ -80,9 +85,15 @@ class Ui_Kwadrat(object):
         self.pushButton.clicked.connect(self.wykonaj)
 
     def wykonaj(self):
-        zmienna1 = self.lineEdit.text()
 
-        polekwadratu = int(zmienna1) * int(zmienna1)
-        obwodkwadratu = int(zmienna1) * 4
-        self.lcdNumber.display(polekwadratu)
-        self.lcdNumber_2.display(obwodkwadratu)
+       zmienna1 = self.lineEdit.text()
+       polekwadratu = int(zmienna1) * int(zmienna1)
+       obwodkwadratu = int(zmienna1) * 4
+       self.lcdNumber.display(polekwadratu)
+       self.lcdNumber_2.display(obwodkwadratu)
+
+
+
+
+
+

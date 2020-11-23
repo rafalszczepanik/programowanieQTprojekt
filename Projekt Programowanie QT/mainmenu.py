@@ -13,6 +13,7 @@ from PyQt5.QtWidgets import QMessageBox
 
 from kwadrat import Ui_Kwadrat
 from kolo import Ui_Kolo
+from prostokat import Ui_Prostokat
 
 
 class FirstSite(object):
@@ -147,7 +148,7 @@ class FirstSite(object):
 
     def openProstokat(self):
         self.window = QtWidgets.QMainWindow()
-        self.ui = Ui_Kwadrat()
+        self.ui = Ui_Prostokat()
         self.ui.setupUi(self.window)
         self.window.show()
 

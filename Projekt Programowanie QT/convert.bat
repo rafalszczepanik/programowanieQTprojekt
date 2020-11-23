@@ -1,1 +1,1 @@
-pyuic5.exe Kolo.ui -o kolo.py
+pyuic5.exe Prostokat.ui -o prostokat.py
