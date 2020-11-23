@@ -1,1 +1,1 @@
-pyuic5.exe Prostokat.ui -o prostokat.py
+pyuic5.exe Roznoboczny.ui -o roznoboczny.py

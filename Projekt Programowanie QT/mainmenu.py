@@ -13,7 +13,9 @@ from PyQt5.QtWidgets import QMessageBox
 
 from kwadrat import Ui_Kwadrat
 from kolo import Ui_Kolo
+from menuTrojkat import Ui_MenuTrojkat
 from prostokat import Ui_Prostokat
+from romb import Ui_Romb
 
 
 class FirstSite(object):
@@ -23,6 +25,8 @@ class FirstSite(object):
     def setupUi(self, Form):
         Form.setObjectName("Kalkulator figur płaskich")
         Form.resize(578, 557)
+        Form.setMinimumSize(QtCore.QSize(570, 520))
+        Form.setMaximumSize(QtCore.QSize(570, 520))
         Form.setStyleSheet("background:rgb(255, 225, 255)")
         self.KwadratButton = QtWidgets.QPushButton(Form)
         self.KwadratButton.setEnabled(True)
@@ -160,13 +164,13 @@ class FirstSite(object):
 
     def openTrojkat(self):
         self.window = QtWidgets.QMainWindow()
-        self.ui = Ui_Kwadrat()
+        self.ui = Ui_MenuTrojkat()
         self.ui.setupUi(self.window)
         self.window.show()
 
     def openRomb(self):
         self.window = QtWidgets.QMainWindow()
-        self.ui = Ui_Kwadrat()
+        self.ui = Ui_Romb()
         self.ui.setupUi(self.window)
         self.window.show()
 
