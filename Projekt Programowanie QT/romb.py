@@ -9,6 +9,9 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtCore import QRegExp
+from PyQt5.QtGui import QRegExpValidator
+from PyQt5.QtWidgets import QMessageBox
 
 
 class Ui_Romb(object):
@@ -69,8 +72,10 @@ class Ui_Romb(object):
         self.lineEdit_wysokosc.setGeometry(QtCore.QRect(160, 70, 113, 22))
         self.lineEdit_wysokosc.setStyleSheet("background:rgb(255, 255, 255)")
         self.lineEdit_wysokosc.setAlignment(QtCore.Qt.AlignHCenter|QtCore.Qt.AlignTop)
-        self.lineEdit_wysokosc.setValidator(QtGui.QIntValidator(1, 999))
+       # self.lineEdit_wysokosc.setValidator(QtGui.QIntValidator(1, 999))
+        self.lineEdit_wysokosc.setValidator(QRegExpValidator(QRegExp("[0.1-9.9]*")))
         self.lineEdit_wysokosc.setObjectName("lineEdit_wysokosc")
+        self.lineEdit_wysokosc.setText('0')
 
 
         self.label_4 = QtWidgets.QLabel(Romb)
@@ -92,7 +97,9 @@ class Ui_Romb(object):
         self.lineEdit_bok_a.setText("")
         self.lineEdit_bok_a.setAlignment(QtCore.Qt.AlignHCenter|QtCore.Qt.AlignTop)
         self.lineEdit_bok_a.setObjectName("lineEdit_bok_a")
-        self.lineEdit_bok_a.setValidator(QtGui.QIntValidator(0, 999))
+       # self.lineEdit_bok_a.setValidator(QtGui.QIntValidator(0, 999))
+        self.lineEdit_bok_a.setValidator(QRegExpValidator(QRegExp("[0.1-9.9]*")))
+        self.lineEdit_bok_a.setText('0')
 
         self.retranslateUi(Romb)
         QtCore.QMetaObject.connectSlotsByName(Romb)
@@ -113,7 +120,17 @@ class Ui_Romb(object):
        zmienna1 = self.lineEdit_bok_a.text()
        zmienna2 = self.lineEdit_wysokosc.text()
 
-       polerombu = int(zmienna1) * int(zmienna2)
-       obwodrombu = int(zmienna1) * 4
-       self.lcdPoleRombu.display(polerombu)
-       self.lcdObwodRombu.display(obwodrombu)
+       polerombu = float(zmienna1) * float(zmienna2)
+       obwodrombu = float(zmienna1) * 4
+
+
+       if (float(zmienna1) and float(zmienna2)) == 0:
+           msg = QMessageBox()
+           msg.setIcon(QMessageBox.Critical)
+           msg.setText("Wpisałes błedną(e) wartość(i)")
+           msg.setInformativeText('Długość nie moze wynosic 0')
+           msg.setWindowTitle("Błąd")
+           msg.exec_()
+       else:
+           self.lcdPoleRombu.display(polerombu)
+           self.lcdObwodRombu.display(obwodrombu)

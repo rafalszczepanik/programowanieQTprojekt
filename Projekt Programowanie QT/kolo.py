@@ -9,6 +9,9 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtCore import QRegExp
+from PyQt5.QtGui import QRegExpValidator
+from PyQt5.QtWidgets import QMessageBox
 
 
 class Ui_Kolo(object):
@@ -33,11 +36,15 @@ class Ui_Kolo(object):
         self.lineEdit.setStyleSheet("background:rgb(255, 255, 255)")
         self.lineEdit.setAlignment(QtCore.Qt.AlignHCenter | QtCore.Qt.AlignTop)
         self.lineEdit.setObjectName("lineEdit")
-        self.lineEdit.setValidator(QtGui.QIntValidator(1, 999))
+        #self.lineEdit.setValidator(QtGui.QIntValidator(1, 999))
+        self.lineEdit.setValidator(QRegExpValidator(QRegExp("[0.1-9.9]*")))
+        self.lineEdit.setText('0')
+
         self.pushButton = QtWidgets.QPushButton(Kolo)
         self.pushButton.setGeometry(QtCore.QRect(100, 120, 93, 28))
         self.pushButton.setStyleSheet("background:rgb(255, 255, 255)")
         self.pushButton.setObjectName("pushButton")
+
         self.label_2 = QtWidgets.QLabel(Kolo)
         self.label_2.setGeometry(QtCore.QRect(20, 170, 101, 31))
         self.label_2.setStyleSheet("labelcolor:rgb(204, 204, 204)")
@@ -81,7 +88,19 @@ class Ui_Kolo(object):
     def wykonaj(self):
             zmienna1 = self.lineEdit.text()
             pom = 3.14
-            polekola = (int(zmienna1) * int(zmienna1))* pom
-            obwodkola = int(zmienna1) * 2
-            self.lcdNumber.display(polekola)
-            self.lcdNumber_2.display(obwodkola)
+            polekola = (float(zmienna1) * float(zmienna1))* pom
+            obwodkola = float(zmienna1) * 2
+
+
+            if (float(zmienna1)) == 0:
+                msg = QMessageBox()
+                msg.setIcon(QMessageBox.Critical)
+                msg.setText("Wpisałes błedną(e) wartość")
+                msg.setInformativeText('Długość nie moze wynosic 0')
+                msg.setWindowTitle("Błąd")
+                msg.exec_()
+            else:
+                self.lcdNumber.display(polekola)
+                self.lcdNumber_2.display(obwodkola)
+
+

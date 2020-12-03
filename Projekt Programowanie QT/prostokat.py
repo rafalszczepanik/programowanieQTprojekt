@@ -9,6 +9,9 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtCore import QRegExp
+from PyQt5.QtGui import QRegExpValidator
+from PyQt5.QtWidgets import QMessageBox
 
 
 class Ui_Prostokat(object):
@@ -70,6 +73,8 @@ class Ui_Prostokat(object):
         self.lineEdit_bok_b.setStyleSheet("background:rgb(255, 255, 255)")
         self.lineEdit_bok_b.setAlignment(QtCore.Qt.AlignHCenter|QtCore.Qt.AlignTop)
         self.lineEdit_bok_b.setObjectName("lineEdit_bok_b")
+        self.lineEdit_bok_b.setValidator(QRegExpValidator(QRegExp("[0.1-9.9]*")))
+        self.lineEdit_bok_b.setText('0')
 
         self.label_4 = QtWidgets.QLabel(Prostokat)
         self.label_4.setGeometry(QtCore.QRect(150, 30, 141, 31))
@@ -88,7 +93,9 @@ class Ui_Prostokat(object):
         self.lineEdit_bok_a.setStyleSheet("background:rgb(255, 255, 255)")
         self.lineEdit_bok_a.setAlignment(QtCore.Qt.AlignHCenter|QtCore.Qt.AlignTop)
         self.lineEdit_bok_a.setObjectName("lineEdit_bok_a")
-        self.lineEdit_bok_a.setValidator(QtGui.QIntValidator(1, 999))
+       # self.lineEdit_bok_a.setValidator(QtGui.QIntValidator(1, 999))
+        self.lineEdit_bok_a.setValidator(QRegExpValidator(QRegExp("[0.1-9.9]*")))
+        self.lineEdit_bok_a.setText('0')
 
         self.retranslateUi(Prostokat)
         QtCore.QMetaObject.connectSlotsByName(Prostokat)
@@ -110,7 +117,17 @@ class Ui_Prostokat(object):
         zmienna1 = self.lineEdit_bok_a.text()
         zmienna2 = self.lineEdit_bok_b.text()
 
-        poleprostokota = int(zmienna1) * int(zmienna2)
-        obwodprostokata = (int(zmienna1) * 2) + (int (zmienna2)*2)
-        self.lcdPoleProst.display(poleprostokota)
-        self.lcdObwodProst.display(obwodprostokata)
+        poleprostokota = float(zmienna1) * float(zmienna2)
+        obwodprostokata = (float(zmienna1) * 2) + (float(zmienna2)*2)
+
+
+        if (float(zmienna1) and float(zmienna2)) == 0:
+            msg = QMessageBox()
+            msg.setIcon(QMessageBox.Critical)
+            msg.setText("Wpisałes błedną(e) wartość")
+            msg.setInformativeText('Długość nie moze wynosic 0')
+            msg.setWindowTitle("Błąd")
+            msg.exec_()
+        else:
+            self.lcdPoleProst.display(poleprostokota)
+            self.lcdObwodProst.display(obwodprostokata)

@@ -9,6 +9,9 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtCore import QRegExp
+from PyQt5.QtGui import QRegExpValidator
+from PyQt5.QtWidgets import QMessageBox
 
 
 class Ui_Roznoboczny(object):
@@ -72,7 +75,9 @@ class Ui_Roznoboczny(object):
         self.line_bok_b.setStyleSheet("background:rgb(255, 255, 255)")
         self.line_bok_b.setAlignment(QtCore.Qt.AlignHCenter|QtCore.Qt.AlignTop)
         self.line_bok_b.setObjectName("line_bok_b")
-        self.line_bok_b.setValidator(QtGui.QIntValidator(1, 999))
+       # self.line_bok_b.setValidator(QtGui.QIntValidator(1, 999))
+        self.line_bok_b.setValidator(QRegExpValidator(QRegExp("[0.1-9.9]*")))
+        self.line_bok_b.setText('0')
 
         self.label_4 = QtWidgets.QLabel(Roznoboczny)
         self.label_4.setGeometry(QtCore.QRect(150, 30, 141, 31))
@@ -93,7 +98,9 @@ class Ui_Roznoboczny(object):
         self.line_bok_a.setText("")
         self.line_bok_a.setAlignment(QtCore.Qt.AlignHCenter|QtCore.Qt.AlignTop)
         self.line_bok_a.setObjectName("line_bok_a")
-        self.line_bok_a.setValidator(QtGui.QIntValidator(1, 999))
+       # self.line_bok_a.setValidator(QtGui.QIntValidator(1, 999))
+        self.line_bok_a.setValidator(QRegExpValidator(QRegExp("[0.1-9.9]*")))
+        self.line_bok_a.setText('0')
 
 
 
@@ -102,7 +109,9 @@ class Ui_Roznoboczny(object):
         self.line_wysokosc_2.setStyleSheet("background:rgb(255, 255, 255)")
         self.line_wysokosc_2.setAlignment(QtCore.Qt.AlignHCenter|QtCore.Qt.AlignTop)
         self.line_wysokosc_2.setObjectName("line_wysokosc_2")
-        self.line_wysokosc_2.setValidator(QtGui.QIntValidator(1, 999))
+        #self.line_wysokosc_2.setValidator(QtGui.QIntValidator(1, 999))
+        self.line_wysokosc_2.setValidator(QRegExpValidator(QRegExp("[0.1-9.9]*")))
+        self.line_wysokosc_2.setText('0')
 
         self.line_bok_c = QtWidgets.QLineEdit(Roznoboczny)
         self.line_bok_c.setGeometry(QtCore.QRect(30, 140, 113, 22))
@@ -112,7 +121,9 @@ class Ui_Roznoboczny(object):
         self.line_bok_c.setText("")
         self.line_bok_c.setAlignment(QtCore.Qt.AlignHCenter|QtCore.Qt.AlignTop)
         self.line_bok_c.setObjectName("line_bok_c")
-        self.line_bok_c.setValidator(QtGui.QIntValidator(1, 999))
+        #self.line_bok_c.setValidator(QtGui.QIntValidator(1, 999))
+        self.line_bok_c.setValidator(QRegExpValidator(QRegExp("[0.1-9.9]*")))
+        self.line_bok_c.setText('0')
 
         self.label_5 = QtWidgets.QLabel(Roznoboczny)
         self.label_5.setGeometry(QtCore.QRect(150, 100, 141, 31))
@@ -163,8 +174,22 @@ class Ui_Roznoboczny(object):
         pole = (1 / 2 ) *float(bokA) * float(wys)
         obwod = float(bokA)+float(bokB)+float(bokC)
 
-        self.lcdPole.display(pole)
-        self.lcdObwod.display(obwod)
+
+
+        if (float(bokB) and float(bokA) and float(bokC) and float(wys )) == 0:
+            msg = QMessageBox()
+            msg.setIcon(QMessageBox.Critical)
+            msg.setText("Wpisałes błedną(e) wartość")
+            msg.setInformativeText('Długość nie moze wynosic 0')
+            msg.setWindowTitle("Błąd")
+            msg.exec_()
+        else:
+            self.lcdPole.display(pole)
+            self.lcdObwod.display(obwod)
+
+
+
+
 
 
 

@@ -9,6 +9,9 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtCore import QRegExp
+from PyQt5.QtGui import QRegExpValidator
+from PyQt5.QtWidgets import QMessageBox
 
 
 class Ui_Rownoboczny(object):
@@ -34,8 +37,10 @@ class Ui_Rownoboczny(object):
         self.lineEdit.setGeometry(QtCore.QRect(90, 70, 113, 22))
         self.lineEdit.setStyleSheet("background:rgb(255, 255, 255)")
         self.lineEdit.setAlignment(QtCore.Qt.AlignHCenter|QtCore.Qt.AlignTop)
-        self.lineEdit.setValidator(QtGui.QIntValidator(1, 999))
+        #self.lineEdit.setValidator(QtGui.QIntValidator(1, 999))
         self.lineEdit.setObjectName("lineEdit")
+        self.lineEdit.setValidator(QRegExpValidator(QRegExp("[0.1-9.9]*")))
+        self.lineEdit.setText('0')
 
         self.obliczButton = QtWidgets.QPushButton(Rownoboczny)
         self.obliczButton.setGeometry(QtCore.QRect(100, 120, 93, 28))
@@ -90,6 +95,17 @@ class Ui_Rownoboczny(object):
         pom = 1 / 4
 
         pole = pom * (float(zmienna1) * float(zmienna1)) * 1.73
-        obwod = int(zmienna1)*3
-        self.lcdPole.display(pole)
-        self.lcdObwod.display(obwod)
+        obwod = float(zmienna1)*3
+
+
+        if (float(zmienna1)) == 0:
+            msg = QMessageBox()
+            msg.setIcon(QMessageBox.Critical)
+            msg.setText("Wpisałes błedną(e) wartość")
+            msg.setInformativeText('Długość nie moze wynosic 0')
+            msg.setWindowTitle("Błąd")
+            msg.exec_()
+        else:
+            self.lcdPole.display(pole)
+            self.lcdObwod.display(obwod)
+
