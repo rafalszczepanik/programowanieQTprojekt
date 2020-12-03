@@ -1,1 +1,1 @@
-pyuic5.exe Roznoboczny.ui -o roznoboczny.py
+pyuic5.exe Help.ui -o help.py

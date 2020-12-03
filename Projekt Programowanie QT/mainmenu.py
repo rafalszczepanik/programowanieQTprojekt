@@ -11,11 +11,15 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QMessageBox
 
+from deltoid import Ui_Deltoid
+from help import Ui_Help
 from kwadrat import Ui_Kwadrat
 from kolo import Ui_Kolo
 from menuTrojkat import Ui_MenuTrojkat
 from prostokat import Ui_Prostokat
 from romb import Ui_Romb
+from rownoleglobok import Ui_Rownoleglobok
+from trapez import Ui_Trapez
 
 
 class FirstSite(object):
@@ -158,7 +162,7 @@ class FirstSite(object):
 
     def openRownoleglobok(self):
         self.window = QtWidgets.QMainWindow()
-        self.ui = Ui_Kwadrat()
+        self.ui = Ui_Rownoleglobok()
         self.ui.setupUi(self.window)
         self.window.show()
 
@@ -174,6 +178,12 @@ class FirstSite(object):
         self.ui.setupUi(self.window)
         self.window.show()
 
+    def openTrapez(self):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = Ui_Trapez()
+        self.ui.setupUi(self.window)
+        self.window.show()
+
 
 
     def Exit(self):
@@ -186,19 +196,15 @@ class FirstSite(object):
             exit(0)
 
 
-    def openTrapez(self):
-        self.ui = Ui_Kwadrat()
-        self.ui.setupUi(self.window)
-        self.window.show()
 
     def openDeltoid(self):
         self.window = QtWidgets.QMainWindow()
-        self.ui = Ui_Kwadrat()
+        self.ui = Ui_Deltoid()
         self.ui.setupUi(self.window)
         self.window.show()
 
     def openHelp(self):
         self.window = QtWidgets.QMainWindow()
-        self.ui = Ui_Kwadrat()
+        self.ui = Ui_Help()
         self.ui.setupUi(self.window)
         self.window.show()
