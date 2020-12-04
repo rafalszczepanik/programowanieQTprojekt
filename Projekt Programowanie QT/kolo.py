@@ -89,7 +89,7 @@ class Ui_Kolo(object):
             zmienna1 = self.lineEdit.text()
             pom = 3.14
             polekola = (float(zmienna1) * float(zmienna1))* pom
-            obwodkola = float(zmienna1) * 2
+            obwodkola = (float(zmienna1)) * 2*pom
 
 
             if (float(zmienna1)) == 0:
