@@ -9,6 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import QMessageBox
 
 from deltoid import Ui_Deltoid
@@ -31,7 +32,17 @@ class FirstSite(object):
         Form.resize(578, 557)
         Form.setMinimumSize(QtCore.QSize(570, 520))
         Form.setMaximumSize(QtCore.QSize(570, 520))
-        Form.setStyleSheet("background:rgb(255, 225, 255)")
+        Form.setStyleSheet('background-image: url(KalkulatorFigur_brand_usage_logo.png);')
+
+
+
+
+
+
+
+
+
+
         self.KwadratButton = QtWidgets.QPushButton(Form)
         self.KwadratButton.setEnabled(True)
         self.KwadratButton.setGeometry(QtCore.QRect(20, 70, 151, 101))
@@ -141,6 +152,10 @@ class FirstSite(object):
         self.trapezBUTTON.clicked.connect(self.openTrapez)
         self.pushButton_9.clicked.connect(self.openDeltoid)
         self.helpButton.clicked.connect(self.openHelp)
+
+    def initUI(self):
+
+        image=QPixmap('KalkulatorFigur_brand_usage_logo.pnd')
 
     def openKwadrat(self):
         self.window = QtWidgets.QMainWindow()

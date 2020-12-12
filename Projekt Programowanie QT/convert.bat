@@ -1,1 +1,1 @@
-pyuic5.exe Help.ui -o help.py
+pyuic5.exe MainMenu2.ui -o mainMenu2.py
