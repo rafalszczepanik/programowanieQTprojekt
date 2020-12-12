@@ -9,6 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtGui import QIcon
 
 
 class Ui_Help(object):
@@ -17,7 +18,8 @@ class Ui_Help(object):
         Help.resize(300, 300)
         Help.setMinimumSize(QtCore.QSize(300, 300))
         Help.setMaximumSize(QtCore.QSize(300, 300))
-        Help.setStyleSheet("background:rgb(255, 255, 255)")
+        Help.setWindowIcon(QIcon('logo.png'))
+        Help.setStyleSheet("background-image: url(tlopodstrony.png);")
         self.horizontalLayoutWidget = QtWidgets.QWidget(Help)
         self.horizontalLayoutWidget.setGeometry(QtCore.QRect(10, 10, 271, 281))
         self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
