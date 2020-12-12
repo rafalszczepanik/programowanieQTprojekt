@@ -10,7 +10,7 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import QRegExp
-from PyQt5.QtGui import QDoubleValidator, QRegExpValidator
+from PyQt5.QtGui import QDoubleValidator, QRegExpValidator, QIcon
 from PyQt5.QtWidgets import QMessageBox
 
 
@@ -20,13 +20,15 @@ class Ui_Kwadrat(object):
         Kwadrat.resize(300, 300)
         Kwadrat.setMinimumSize(QtCore.QSize(300, 300))
         Kwadrat.setMaximumSize(QtCore.QSize(300, 300))
-        Kwadrat.setStyleSheet("background:rgb(11, 198, 205)")
+        Kwadrat.setWindowIcon(QIcon('logo.png'))
+        Kwadrat.setStyleSheet("background-image: url(tlopodstrony.png);")
+
         self.label = QtWidgets.QLabel(Kwadrat)
         self.label.setGeometry(QtCore.QRect(60, 30, 190, 31))
-        self.label.setStyleSheet("labelcolor:rgb(204, 204, 204)")
+        self.label.setStyleSheet("background:rgb(255, 255, 255)")
         self.label.setFrameShape(QtWidgets.QFrame.Box)
-        self.label.setFrameShadow(QtWidgets.QFrame.Sunken)
-        self.label.setLineWidth(4)
+       ## self.label.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.label.setLineWidth(2)
         self.label.setMidLineWidth(0)
         self.label.setWordWrap(False)
         self.label.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByMouse)
@@ -49,10 +51,10 @@ class Ui_Kwadrat(object):
 
         self.label_2 = QtWidgets.QLabel(Kwadrat)
         self.label_2.setGeometry(QtCore.QRect(20, 170, 101, 31))
-        self.label_2.setStyleSheet("labelcolor:rgb(204, 204, 204)")
+        self.label_2.setStyleSheet("background:rgb(255, 255, 255)")
         self.label_2.setFrameShape(QtWidgets.QFrame.Box)
-        self.label_2.setFrameShadow(QtWidgets.QFrame.Sunken)
-        self.label_2.setLineWidth(4)
+       ## self.label_2.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.label_2.setLineWidth(2)
         self.label_2.setMidLineWidth(0)
         self.label_2.setWordWrap(False)
         self.label_2.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByMouse)
@@ -60,10 +62,10 @@ class Ui_Kwadrat(object):
 
         self.label_3 = QtWidgets.QLabel(Kwadrat)
         self.label_3.setGeometry(QtCore.QRect(170, 170, 120, 31))
-        self.label_3.setStyleSheet("labelcolor:rgb(204, 204, 204)")
+        self.label_3.setStyleSheet("background:rgb(255, 255, 255)")
         self.label_3.setFrameShape(QtWidgets.QFrame.Box)
-        self.label_3.setFrameShadow(QtWidgets.QFrame.Sunken)
-        self.label_3.setLineWidth(4)
+       ## self.label_3.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.label_3.setLineWidth(2)
         self.label_3.setMidLineWidth(0)
         self.label_3.setWordWrap(False)
         self.label_3.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByMouse)

@@ -10,7 +10,7 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import QRegExp
-from PyQt5.QtGui import QRegExpValidator
+from PyQt5.QtGui import QRegExpValidator, QIcon
 from PyQt5.QtWidgets import QMessageBox
 
 
@@ -20,13 +20,14 @@ class Ui_Rownoboczny(object):
         Rownoboczny.resize(300, 300)
         Rownoboczny.setMinimumSize(QtCore.QSize(300, 300))
         Rownoboczny.setMaximumSize(QtCore.QSize(300, 300))
-        Rownoboczny.setStyleSheet("background:rgb(11, 198, 205)")
+        Rownoboczny.setWindowIcon(QIcon('logo.png'))
+        Rownoboczny.setStyleSheet("background-image: url(tlopodstrony.png);")
 
         self.label = QtWidgets.QLabel(Rownoboczny)
         self.label.setGeometry(QtCore.QRect(90, 30, 121, 31))
-        self.label.setStyleSheet("labelcolor:rgb(204, 204, 204)")
+        self.label.setStyleSheet("background:rgb(255, 255, 255)")
         self.label.setFrameShape(QtWidgets.QFrame.Box)
-        self.label.setFrameShadow(QtWidgets.QFrame.Sunken)
+       # self.label.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.label.setLineWidth(1)
         self.label.setMidLineWidth(0)
         self.label.setWordWrap(False)
@@ -49,9 +50,9 @@ class Ui_Rownoboczny(object):
 
         self.label_2_pole = QtWidgets.QLabel(Rownoboczny)
         self.label_2_pole.setGeometry(QtCore.QRect(20, 170, 101, 31))
-        self.label_2_pole.setStyleSheet("labelcolor:rgb(204, 204, 204)")
+        self.label_2_pole.setStyleSheet("background:rgb(255, 255, 255)")
         self.label_2_pole.setFrameShape(QtWidgets.QFrame.Box)
-        self.label_2_pole.setFrameShadow(QtWidgets.QFrame.Sunken)
+        #self.label_2_pole.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.label_2_pole.setLineWidth(1)
         self.label_2_pole.setMidLineWidth(0)
         self.label_2_pole.setWordWrap(False)
@@ -60,9 +61,9 @@ class Ui_Rownoboczny(object):
 
         self.label_3_obwod = QtWidgets.QLabel(Rownoboczny)
         self.label_3_obwod.setGeometry(QtCore.QRect(170, 170, 111, 31))
-        self.label_3_obwod.setStyleSheet("labelcolor:rgb(204, 204, 204)")
+        self.label_3_obwod.setStyleSheet("background:rgb(255, 255, 255)")
         self.label_3_obwod.setFrameShape(QtWidgets.QFrame.Box)
-        self.label_3_obwod.setFrameShadow(QtWidgets.QFrame.Sunken)
+        #self.label_3_obwod.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.label_3_obwod.setLineWidth(1)
         self.label_3_obwod.setMidLineWidth(0)
         self.label_3_obwod.setWordWrap(False)

@@ -9,6 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtGui import QIcon
 
 from rownoboczny import Ui_Rownoboczny
 from roznoboczny import Ui_Roznoboczny
@@ -21,7 +22,10 @@ class Ui_MenuTrojkat(object):
         Form.setMinimumSize(QtCore.QSize(380, 231))
         Form.setMaximumSize(QtCore.QSize(380, 231))
         Form.setMinimumSize(QtCore.QSize(20, 20))
-        Form.setStyleSheet("background:rgb(255, 225, 255)")
+        Form.setStyleSheet('background-image: url(tlo2.png);')
+        Form.setWindowIcon(QIcon('logo.png'))
+
+
         self.roznobocznyButton = QtWidgets.QPushButton(Form)
         self.roznobocznyButton.setEnabled(True)
         self.roznobocznyButton.setGeometry(QtCore.QRect(20, 70, 151, 101))

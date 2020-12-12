@@ -10,7 +10,7 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import QRegExp
-from PyQt5.QtGui import QRegExpValidator
+from PyQt5.QtGui import QRegExpValidator, QIcon
 from PyQt5.QtWidgets import QMessageBox
 
 
@@ -20,13 +20,14 @@ class Ui_Rownoleglobok(object):
         Rownoleglobok.resize(300, 300)
         Rownoleglobok.setMinimumSize(QtCore.QSize(300, 300))
         Rownoleglobok.setMaximumSize(QtCore.QSize(300, 300))
-        Rownoleglobok.setStyleSheet("background:rgb(11, 198, 205)")
+        Rownoleglobok.setWindowIcon(QIcon('logo.png'))
+        Rownoleglobok.setStyleSheet("background-image: url(tlopodstrony.png);")
 
         self.label = QtWidgets.QLabel(Rownoleglobok)
         self.label.setGeometry(QtCore.QRect(10, 30, 141, 31))
-        self.label.setStyleSheet("labelcolor:rgb(204, 204, 204)")
+        self.label.setStyleSheet("background:rgb(255, 255, 255)")
         self.label.setFrameShape(QtWidgets.QFrame.Box)
-        self.label.setFrameShadow(QtWidgets.QFrame.Sunken)
+        #self.label.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.label.setLineWidth(1)
         self.label.setMidLineWidth(0)
         self.label.setWordWrap(False)
@@ -40,9 +41,9 @@ class Ui_Rownoleglobok(object):
 
         self.label_2 = QtWidgets.QLabel(Rownoleglobok)
         self.label_2.setGeometry(QtCore.QRect(10, 220, 131, 31))
-        self.label_2.setStyleSheet("labelcolor:rgb(204, 204, 204)")
+        self.label_2.setStyleSheet("background:rgb(255, 255, 255)")
         self.label_2.setFrameShape(QtWidgets.QFrame.Box)
-        self.label_2.setFrameShadow(QtWidgets.QFrame.Sunken)
+        #self.label_2.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.label_2.setLineWidth(1)
         self.label_2.setMidLineWidth(0)
         self.label_2.setWordWrap(False)
@@ -51,9 +52,9 @@ class Ui_Rownoleglobok(object):
 
         self.label_3 = QtWidgets.QLabel(Rownoleglobok)
         self.label_3.setGeometry(QtCore.QRect(140, 220, 151, 31))
-        self.label_3.setStyleSheet("labelcolor:rgb(204, 204, 204)")
+        self.label_3.setStyleSheet("background:rgb(255, 255, 255)")
         self.label_3.setFrameShape(QtWidgets.QFrame.Box)
-        self.label_3.setFrameShadow(QtWidgets.QFrame.Sunken)
+        #self.label_3.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.label_3.setLineWidth(1)
         self.label_3.setMidLineWidth(0)
         self.label_3.setWordWrap(False)
@@ -74,9 +75,9 @@ class Ui_Rownoleglobok(object):
 
         self.label_4 = QtWidgets.QLabel(Rownoleglobok)
         self.label_4.setGeometry(QtCore.QRect(160, 30, 121, 31))
-        self.label_4.setStyleSheet("labelcolor:rgb(204, 204, 204)")
+        self.label_4.setStyleSheet("background:rgb(255, 255, 255)")
         self.label_4.setFrameShape(QtWidgets.QFrame.Box)
-        self.label_4.setFrameShadow(QtWidgets.QFrame.Sunken)
+        #self.label_4.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.label_4.setLineWidth(1)
         self.label_4.setMidLineWidth(0)
         self.label_4.setWordWrap(False)
@@ -96,9 +97,9 @@ class Ui_Rownoleglobok(object):
 
         self.label_5 = QtWidgets.QLabel(Rownoleglobok)
         self.label_5.setGeometry(QtCore.QRect(80, 100, 141, 31))
-        self.label_5.setStyleSheet("labelcolor:rgb(204, 204, 204)")
+        self.label_5.setStyleSheet("background:rgb(255, 255, 255)")
         self.label_5.setFrameShape(QtWidgets.QFrame.Box)
-        self.label_5.setFrameShadow(QtWidgets.QFrame.Sunken)
+       # self.label_5.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.label_5.setLineWidth(1)
         self.label_5.setMidLineWidth(0)
         self.label_5.setWordWrap(False)
